@@ -39,10 +39,12 @@ nav ul li a{
     color: #ffffff;
     font-size: 1.4em;
     text-shadow: black 0.1em 0.1em 0.2em;
+    transition: 0.25s;
 
 }
 nav ul li a:hover{
     color: red;
+    transition: 0.25s;
 }
 
 body{
@@ -90,7 +92,7 @@ footer p{
 
     width: 220px;
     height: 50px;
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255, 0.2);
     border-radius: 20px;
     
     border: 2px solid white;
@@ -114,4 +116,27 @@ footer p{
     margin-bottom: 20px;
 
     text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.opcao {
+    display: inline-block;
+    position: relative;
+}
+  
+.opcao::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.opcao:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
