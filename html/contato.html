@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="shortcut icon" type="imagex/png" href="../image/logo.ico">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="fundo">
+        <video autoplay muted loop>
+            <source src="../video/background-4k.mp4" type="video/mp4">
+        </video>
+    </div>
+    <header>
+        <img class="logo" src="../image/logo.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="opcao">Início</a></li>
+                <li><a href="./sobre.html" class="opcao" >Sobre</a></li>
+                <li><a href="./discografia.html" class="opcao" >Discografia</a></li>
+                <li><a href="./fotos.html" class="opcao" >Fotos</a></li>
+                <li><a href="./contato.html" class="opcao" >Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <form action="#" method="post">
+            <label for="mensagem">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="mensagem">mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        
+            <button type="submit">Enviar</button>
+          </form>
+    </div>
+</html>
