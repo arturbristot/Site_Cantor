@@ -49,6 +49,29 @@ nav ul li a:hover{
     transition: 0.25s;
 }
 
+.opcao {
+    display: inline-block;
+    position: relative;
+}
+  
+.opcao::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.opcao:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -63,3 +86,27 @@ body{
     align-items: center;
 }
 
+.tabelas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.dvd{
+    margin: 30px;
+    width: 20em;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.dvd:hover{
+    width: 20em;
+    border-radius: 5px;
+
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+    transition: 0.25s;
+    scale: 1.05;
+}
