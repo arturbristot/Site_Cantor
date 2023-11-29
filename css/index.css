@@ -13,6 +13,8 @@ video{
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    filter: grayscale(100%);
+    background-color: #ccc;
 }
 
 header{
@@ -139,4 +141,44 @@ footer p{
 .opcao:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 13vh;
+  }
+  
+
+#fundo{
+    margin-top: 20vh;
+    width: 100%;
+    height: 59vh;
+    position: fixed;
+    z-index: -1;
+    background-color: white;
+}	
+
+#slider {
+    margin-top: 21vh;
+    width: 100%;
+    height: 59vh;
+    position: fixed;
+
+}
+
+#slider img{
+    opacity: 0;
+
+    position: absolute;
+
+    width: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 800ms;
+}
+
+#slider img.selected { 
+    opacity: 1;
 }

@@ -25,9 +25,48 @@
                 <li><a href="./index.html" class="opcao">Início</a></li>
                 <li><a href="./sobre.html" class="opcao" >Sobre</a></li>
                 <li><a href="./discografia.html" class="opcao" >Discografia</a></li>
-                <li><a href="./fotos.html" class="opcao" >Fotos</a></li>
+                <li><a href="./fotos.html" class="opcao" >Banners</a></li>
                 <li><a href="./contato.html" class="opcao" >Contato</a></li>
             </ul>
         </nav>
     </header>
+    <div id="slider">
+        <img class="selected" src="../image/banner/1.jpg" alt="Image1">
+        <img src="../image/banner/2.jpg" alt="Image2">
+        <img src="../image/banner/3.jpg" alt="Image3">
+    </div>
+    <div id="fundo"></div>
+
+    <script>
+        
+    let time = 5000,
+    currentImageIndex = 0,
+    images = document
+                .querySelectorAll("#slider img")
+    max = images.length;
+
+    function nextImage() {
+
+    images[currentImageIndex]
+        .classList.remove("selected")
+
+    currentImageIndex++
+
+    if(currentImageIndex >= max)
+        currentImageIndex = 0
+
+    images[currentImageIndex]
+        .classList.add("selected")
+    }
+
+    function start() {
+        setInterval(() => {
+            // troca de image
+            nextImage()
+        }, time)
+    }
+
+    window.addEventListener("load", start)
+    </script>
+
 </html>
